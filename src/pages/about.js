@@ -10,6 +10,10 @@ export default function About({ posts }) {
 
 // This function gets called at build time
 export async function getStaticProps() {
+  const baseUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://static-side-rendering.vercel.app/api/posts`
+      : "http://localhost:3000/api/posts";
   // Call an external API endpoint to get posts
   const res = await fetch("/api/posts");
   const posts = await res.json();
