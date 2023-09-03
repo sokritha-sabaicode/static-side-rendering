@@ -1,6 +1,10 @@
 // pages/api/posts.js
 
-const posts = []; // Our in-memory "database"
+const posts = [
+  {
+    title: "Movie A",
+  },
+]; // Our in-memory "database"
 
 export default function handler(req, res) {
   if (req.method === "GET") {
