@@ -15,7 +15,7 @@ export async function getStaticProps() {
       ? `https://static-side-rendering.vercel.app/api/posts`
       : "http://localhost:3000/api/posts";
   // Call an external API endpoint to get posts
-  const res = await fetch("/api/posts");
+  const res = await fetch(baseUrl);
   const posts = await res.json();
   console.log(posts);
 
