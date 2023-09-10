@@ -1,10 +1,13 @@
 export default function About({ posts }) {
   return (
-    <ul>
-      {posts.map((post) => (
-        <li>{post.title}</li>
-      ))}
-    </ul>
+    <>
+      Movie Lists
+      <ul>
+        {posts.map((post) => (
+          <li>{post.title}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
